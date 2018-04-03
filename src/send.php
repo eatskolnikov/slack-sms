@@ -11,11 +11,6 @@ use Twilio\Rest\Client;
 //If this is a post request
 if(!empty($_POST))
 {
-
-    echo "SLACK APP TOKEN: \n". $_ENV["SLACK_APP_TOKEN"];
-
-    var_dump($_POST);
-
     function getUrl($url)
     {
         $ch = curl_init(); 
@@ -65,12 +60,10 @@ if(!empty($_POST))
     $profileUrl = "https://slack.com/api/users.profile.get?token=".$_ENV["SLACK_APP_TOKEN"]."&user=".$userId;
 
     $result = getUrl($profileUrl);
-
-    echo "PROFILE REQUEST RESULT: \n";
-    var_dump($result);
-
     $sanitizedPhone = normalizeNumber($result->profile->phone); 
-    sendSMS($sanitizedPhone, $parts[1] );
+    sendSMS($sanitizedPhone, $parts[1]);
+
+    echo "SMS sent to: " . $result->profile->real_name;
 }
 else
 {
