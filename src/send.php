@@ -63,7 +63,14 @@ if(!empty($_POST))
     $sanitizedPhone = normalizeNumber($result->profile->phone); 
     sendSMS($sanitizedPhone, $parts[1]);
 
-    echo "SMS sent to: " . $result->profile->real_name;
+    echo json_encode(
+            array ( 
+                "text" => "SMS sent to " . $result->profile->real_name,
+                "attachments"=> array( 
+                    array("text"=>"Message: ".$parts[1] )
+                )
+            )
+        );
 }
 else
 {
