@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-$Loader = new josegonzalez\Dotenv\Loader(__DIR__ . '.env');
+$Loader = new josegonzalez\Dotenv\Loader(__DIR__ . '/.env');
 $Loader->parse();
 $Loader->toEnv();
 
