@@ -63,8 +63,12 @@ if(!empty($_POST))
     $sanitizedPhone = normalizeNumber($result->profile->phone); 
     sendSMS($sanitizedPhone, $parts[1]);
 
+    header('Content-Type: application/json');
+    
     echo json_encode(
             array ( 
+                "response_type" => "in_channel",
+                "color" => "#36a64f",
                 "text" => "SMS sent to " . $result->profile->real_name,
                 "attachments"=> array( 
                     array("text"=>"Message: ".$parts[1] )
