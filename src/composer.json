@@ -10,6 +10,7 @@
         }
     ],
     "require": {
-        "twilio/sdk": "^5.16"
+        "twilio/sdk": "^5.16",
+        "josegonzalez/dotenv": "dev-master"
     }
 }

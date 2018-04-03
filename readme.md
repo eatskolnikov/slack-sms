@@ -1,6 +1,5 @@
-Define the following globals:
 
-Go to /etc/environment and set the following gobals
+Create a .env and set the following gobals
 
 SLACK_APP_TOKEN
 
