@@ -1,0 +1,15 @@
+{
+    "name": "eatskolnikov/slack-sms",
+    "description": "Slack sms sender script",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Enmanuel Toribio",
+            "email": "enmanuel@torib.io"
+        }
+    ],
+    "require": {
+        "twilio/sdk": "^5.16"
+    }
+}
