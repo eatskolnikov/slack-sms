@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 use Twilio\Rest\Client;
 
 //If this is a post request
-if(!empty($_POST['foo']))
+if(!empty($_POST))
 {
 
     echo "SLACK APP TOKEN: \n". $_ENV["SLACK_APP_TOKEN"];
