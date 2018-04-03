@@ -68,7 +68,7 @@ if(!empty($_POST))
     echo json_encode(
             array ( 
                 "response_type" => "in_channel",
-                "color" => "#36a64f",
+                "color" => "good",
                 "text" => "SMS sent to " . $result->profile->real_name,
                 "attachments"=> array( 
                     array("text"=>"Message: ".$parts[1] )
